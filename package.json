@@ -1,7 +1,7 @@
 {
   "name": "flux-image-skill",
   "version": "1.0.0",
-  "description": "A Claude Code skill for generating images using Flux (Black Forest Labs) models via Atlas Cloud API",
+  "description": "AI agent skill for generating images using Flux (Black Forest Labs) models via Atlas Cloud API",
   "type": "module",
   "bin": {
     "flux-image": "./src/cli.ts"
@@ -15,7 +15,13 @@
     "black-forest-labs",
     "image-generation",
     "ai",
+    "agent-skill",
     "claude-code",
+    "cursor",
+    "codex",
+    "copilot",
+    "gemini-cli",
+    "windsurf",
     "skill",
     "atlas-cloud",
     "text-to-image",

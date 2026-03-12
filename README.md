@@ -1,8 +1,10 @@
 # Flux Image Skill
 
-A Claude Code skill for generating images using Flux (Black Forest Labs) models via Atlas Cloud API.
+An AI Agent Skill for generating images using Flux (Black Forest Labs) models via Atlas Cloud API.
 
-Flux is Black Forest Labs' cutting-edge image generation model family, offering some of the most affordable and highest-quality text-to-image generation available. This skill integrates Flux directly into your Claude Code workflow with support for multiple model variants, LoRA fine-tuning, and unrestricted NSFW generation.
+Works with 15+ AI coding agents including Claude Code, Cursor, OpenAI Codex, GitHub Copilot, Gemini CLI, Windsurf, OpenCode, Kiro, and more.
+
+Flux is Black Forest Labs' cutting-edge image generation model family, offering some of the most affordable and highest-quality text-to-image generation available. This skill integrates Flux directly into your AI coding workflow with support for multiple model variants, LoRA fine-tuning, and unrestricted NSFW generation.
 
 ---
 
@@ -242,9 +244,15 @@ Options:
 
 ---
 
-## Claude Code Skill Integration
+## Agent Skill Integration
 
-This tool is designed to work as a Claude Code skill. Add it to your Claude Code configuration:
+This tool is designed to work as an AI agent skill across all major coding agents. Install it with a single command:
+
+```bash
+npx skills add flux-image-skill
+```
+
+This works with Claude Code, Cursor, OpenAI Codex, GitHub Copilot, Gemini CLI, Windsurf, OpenCode, Kiro, and any agent that supports skill installation.
 
 ### Add to your project's CLAUDE.md
 
@@ -262,11 +270,11 @@ Use the `flux-image` CLI to generate images:
 
 ### How It Works
 
-1. Claude Code reads the CLAUDE.md instructions
-2. When asked to generate images, Claude invokes the `flux-image` CLI
+1. Your AI agent reads the skill instructions
+2. When asked to generate images, the agent invokes the `flux-image` CLI
 3. The CLI sends requests to Atlas Cloud API
 4. Images are downloaded and saved to the `./output` directory
-5. Claude can reference the saved images in subsequent interactions
+5. The agent can reference the saved images in subsequent interactions
 
 ---
 
