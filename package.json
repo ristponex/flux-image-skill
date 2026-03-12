@@ -1,0 +1,29 @@
+{
+  "name": "flux-image-skill",
+  "version": "1.0.0",
+  "description": "A Claude Code skill for generating images using Flux (Black Forest Labs) models via Atlas Cloud API",
+  "type": "module",
+  "bin": {
+    "flux-image": "./src/cli.ts"
+  },
+  "scripts": {
+    "start": "bun run src/cli.ts",
+    "dev": "bun run --watch src/cli.ts"
+  },
+  "keywords": [
+    "flux",
+    "black-forest-labs",
+    "image-generation",
+    "ai",
+    "claude-code",
+    "skill",
+    "atlas-cloud",
+    "text-to-image",
+    "lora"
+  ],
+  "author": "thoughtincode",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/bun": "latest"
+  }
+}
