@@ -16,19 +16,21 @@ Flux is Black Forest Labs' cutting-edge image generation model family, offering 
 - **NSFW Mode** — Disable safety checker for unrestricted generation
 - **Multiple Model Variants** — From ultra-fast Schnell to high-quality Dev
 - **Kontext Models** — Advanced context-aware generation
-- **Incredibly Affordable** — Starting at just $0.003/image with Flux Schnell
+- **Incredibly Affordable** — Starting at just from $0.003/image with Flux Schnell
 
 ---
 
 ## Model Variants
 
-| Model | ID | Price | Description |
-|-------|-----|-------|-------------|
-| Flux Dev | `black-forest-labs/flux-dev` | $0.012/req | High-quality, balanced speed and detail |
-| Flux Schnell | `black-forest-labs/flux-schnell` | $0.003/req | Ultra-fast generation, great for prototyping |
-| Flux Dev LoRA | `black-forest-labs/flux-dev-lora` | $0.032/req | Dev model with LoRA fine-tuning support |
-| Flux Kontext Dev | `black-forest-labs/flux-kontext-dev` | $0.020/req | Context-aware generation |
-| Flux Kontext Dev LoRA | `black-forest-labs/flux-kontext-dev-lora` | $0.032/req | Kontext with LoRA support |
+| Model | ID | Starting Price per Image | Description |
+|-------|-----|--------------------------|-------------|
+| Flux Dev | `black-forest-labs/flux-dev` | from $0.012/image | High-quality, balanced speed and detail |
+| Flux Schnell | `black-forest-labs/flux-schnell` | from $0.003/image | Ultra-fast generation, great for prototyping |
+| Flux Dev LoRA | `black-forest-labs/flux-dev-lora` | from $0.032/image | Dev model with LoRA fine-tuning support |
+| Flux Kontext Dev | `black-forest-labs/flux-kontext-dev` | from $0.020/image | Context-aware generation |
+| Flux Kontext Dev LoRA | `black-forest-labs/flux-kontext-dev-lora` | from $0.032/image | Kontext with LoRA support |
+
+*Prices shown are starting prices. Higher resolution or additional features may cost more.*
 
 ---
 
@@ -408,7 +410,7 @@ MIT License. See [LICENSE](./LICENSE) for details.
 
 This workflow is optimized for Atlas Cloud. Move from experiment to enterprise-ready scale.
 
-- **Incredibly Affordable**: Flux Dev at only $0.012/image, Schnell at $0.003/image
+- **Incredibly Affordable**: Flux Dev at only from $0.012/image, Schnell at from $0.003/image
 - **NSFW Support**: Disable safety checker for unrestricted generation
 - **LoRA Support**: Custom fine-tuned models via Flux Dev LoRA
 - **Enterprise Security**: SOC I & II Certified | HIPAA Compliant
