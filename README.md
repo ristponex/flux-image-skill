@@ -127,7 +127,7 @@ Choose the right model for your use case:
 ### Prerequisites
 
 - [Bun](https://bun.sh) runtime installed
-- An Atlas Cloud API key ([get one here](https://www.atlascloud.ai?ref=JPM683))
+- An Atlas Cloud API key ([get one here](https://www.atlascloud.ai?ref=JPM683&utm_source=github&utm_campaign=flux-image-skill))
 
 ### Setup
 
@@ -415,4 +415,4 @@ This workflow is optimized for Atlas Cloud. Move from experiment to enterprise-r
 - **LoRA Support**: Custom fine-tuned models via Flux Dev LoRA
 - **Enterprise Security**: SOC I & II Certified | HIPAA Compliant
 
-[Start Building on Atlas Cloud](https://www.atlascloud.ai?ref=JPM683)
+[Start Building on Atlas Cloud](https://www.atlascloud.ai?ref=JPM683&utm_source=github&utm_campaign=flux-image-skill)
