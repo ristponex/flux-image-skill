@@ -236,11 +236,13 @@ async function pollResult(requestId: string, maxAttempts = 120, intervalMs = 200
       throw new Error(`Poll request failed (${response.status}): ${errorText}`);
     }
 
-    const data = (await response.json()) as { status: string; output?: any; error?: string };
+    const raw = (await response.json()) as { code?: number; data?: any; status?: string; output?: any; error?: string };
+    const data = raw.data || raw;
 
-    if (data.status === "completed") {
+    if (data.status === "completed" || data.status === "succeeded") {
       console.log("\nGeneration completed!");
-      return data.output;
+      const outputs = data.outputs || data.output;
+      return Array.isArray(outputs) ? outputs : outputs ? [outputs] : [];
     }
 
     if (data.status === "failed") {
@@ -346,22 +348,23 @@ async function main() {
     const output = await pollResult(requestId);
 
     // Download and save images
-    const images = output?.images || [];
-    if (images.length === 0) {
+    // API returns URL strings directly (not {url} objects)
+    const imageUrls: string[] = Array.isArray(output) ? output : output ? [output] : [];
+    if (imageUrls.length === 0) {
       console.error("No images returned from the API.");
       process.exit(1);
     }
 
-    console.log(`\nDownloading ${images.length} image(s)...`);
+    console.log(`\nDownloading ${imageUrls.length} image(s)...`);
 
-    for (let i = 0; i < images.length; i++) {
-      const img = images[i];
+    for (let i = 0; i < imageUrls.length; i++) {
+      const url = typeof imageUrls[i] === "string" ? imageUrls[i] : (imageUrls[i] as any).url || imageUrls[i];
       const outputPath = getOutputPath(values.output as string | undefined, i);
-      await downloadImage(img.url, outputPath);
+      await downloadImage(url, outputPath);
       console.log(`Saved: ${outputPath}`);
     }
 
-    console.log(`\nDone! Generated ${images.length} image(s).`);
+    console.log(`\nDone! Generated ${imageUrls.length} image(s).`);
   } catch (error) {
     console.error(`\nError: ${(error as Error).message}`);
     process.exit(1);
